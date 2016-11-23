@@ -29,6 +29,7 @@ class Adapter implements GatewayInterface {
 		
 		$instructions = str_replace('{{invoice}}', $transaction->guid, $this->wire_instructions);
 		$instructions = str_replace('{{amount}}', $transaction->getAmount()->format(), $instructions);
+		$instructions = str_replace('{{merchant}}', $transaction->getMerchant()->title, $instructions);
 		
 		$site = elgg_get_site_entity();
 		$subject = elgg_echo('payments:wire:instructions');

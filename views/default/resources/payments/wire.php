@@ -13,6 +13,7 @@ $title = elgg_echo('payments:invoice:id', [$transaction->guid]);
 
 $instructions = str_replace('{{invoice}}', $transaction->guid, $transaction->wire_instructions);
 $instructions = str_replace('{{amount}}', $transaction->getAmount()->format(), $instructions);
+$instructions = str_replace('{{merchant}}', $transaction->getMerchant()->title, $instructions);
 
 $instructions = elgg_view('output/longtext', [
 	'value' => $instructions,

@@ -9,7 +9,9 @@ return [
 	'payments:wire:instructions:help' => '
 		Bank account and routing information.
 		Use {{invoice}} to include the number of the invoice/transaction, e.g. as a payment reason.
-		Use {{amount}} to include the amount',
+		Use {{amount}} to include the amount
+		Use {{merchant}} to include the final recipient
+		',
 
 	'payments:wire:instructions:body' => '
 		Please use the following payment instructions to transfer %s to %s:
@@ -22,4 +24,6 @@ return [
 
 	'admin:payments:payments_wire' => 'Wire Payments',
 	'payments:charges:wire_fee' => 'Processing Fee',
+
+	'payments:invoice:id' => 'Invoice %s',
 ];
