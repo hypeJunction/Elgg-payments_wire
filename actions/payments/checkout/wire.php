@@ -17,7 +17,7 @@ if ($transaction) {
 		$wire_instructions = elgg_get_plugin_setting('wire_instructions', 'payments_wire');
 	}
 	$wire_instructions = elgg_trigger_plugin_hook('wire_instructions', 'wire', [
-		'transction' => $transaction,
+		'transaction' => $transaction,
 	], $wire_instructions);
 
 	$wire_adapter = new Adapter();
